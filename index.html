@@ -419,23 +419,33 @@
 
   </main>
 
-  <!-- Custom Scrollbar (Right Side) -->
-  <div class="scrollbar" id="customScrollbar">
-    <button class="scrollbar__arrow scrollbar__arrow--up" id="scrollArrowUp" aria-label="Scroll ke atas">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  <!-- Scroll Navigator (Right Side) -->
+  <div class="scroll-nav" id="scrollNav">
+    <a href="#beranda" class="scroll-nav__dot active" data-tooltip="Beranda" aria-label="Beranda">
+      <span class="scroll-nav__indicator"></span>
+    </a>
+    <a href="#tentang" class="scroll-nav__dot" data-tooltip="Tentang" aria-label="Tentang">
+      <span class="scroll-nav__indicator"></span>
+    </a>
+    <a href="#layanan" class="scroll-nav__dot" data-tooltip="Layanan" aria-label="Layanan">
+      <span class="scroll-nav__indicator"></span>
+    </a>
+    <a href="#portofolio" class="scroll-nav__dot" data-tooltip="Portofolio" aria-label="Portofolio">
+      <span class="scroll-nav__indicator"></span>
+    </a>
+    <a href="#alasan" class="scroll-nav__dot" data-tooltip="Kenapa Saya" aria-label="Kenapa Saya">
+      <span class="scroll-nav__indicator"></span>
+    </a>
+    <a href="#testimoni" class="scroll-nav__dot" data-tooltip="Testimoni" aria-label="Testimoni">
+      <span class="scroll-nav__indicator"></span>
+    </a>
+    <a href="#kontak" class="scroll-nav__dot" data-tooltip="Kontak" aria-label="Kontak">
+      <span class="scroll-nav__indicator"></span>
+    </a>
+    <div class="scroll-nav__line"></div>
+    <button class="scroll-nav__top" id="scrollTop" aria-label="Scroll ke atas">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
-    <div class="scrollbar__track" id="scrollTrack">
-      <div class="scrollbar__fill" id="scrollFill"></div>
-      <div class="scrollbar__thumb" id="scrollThumb">
-        <div class="scrollbar__thumb-grip">
-          <span></span><span></span><span></span>
-        </div>
-      </div>
-    </div>
-    <button class="scrollbar__arrow scrollbar__arrow--down" id="scrollArrowDown" aria-label="Scroll ke bawah">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-    </button>
-    <div class="scrollbar__percent" id="scrollPercent">0%</div>
   </div>
 
   <!-- ====== FOOTER ====== -->
