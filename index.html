@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dzaki — Freelance Web Developer yang membantu UMKM punya website profesional, cepat, dan siap jualan." />
+  <meta name="author" content="Dzaki" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%233b82f6'/><text x='50' y='72' font-size='60' font-weight='bold' text-anchor='middle' fill='white' font-family='system-ui'>D</text></svg>" type="image/svg+xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dzaki  git config --global user.name "Nama Kamu"
+  git config --global user.email "email@kamu.com" — Web Developer untuk UMKM" />
+  <meta property="og:description" content="Freelance Web Developer yang membantu UMKM punya website profesional, cepat, dan siap jualan." />
+  <meta property="og:url" content="https://dzaki.dev" />
+  <meta property="og:site_name" content="dzaki.dev" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dzaki — Web Developer untuk UMKM" />
+  <meta name="twitter:description" content="Freelance Web Developer yang membantu UMKM punya website profesional, cepat, dan siap jualan." />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Dzaki — Web Developer UMKM",
+    "url": "https://dzaki.dev",
+    "description": "Freelance Web Developer yang membantu UMKM punya website profesional, cepat, dan siap jualan.",
+    "priceRange": "Rp 500.000 - Rp 1.000.000+",
+    "areaServed": "Indonesia",
+    "serviceType": ["Web Development", "Landing Page", "Company Profile", "Website UMKM"],
+    "founder": {
+      "@type": "Person",
+      "name": "Dzaki",
+      "jobTitle": "Freelance Web Developer"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "20"
+    }
+  }
+  </script>
+
+  <title>Dzaki | Web Developer UMKM</title>
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="loader" id="pageLoader" aria-hidden="true">
+    <div class="loader__spinner">
+      <span class="logo-dot"></span>
+      <span class="loader__text">dzaki<span class="logo-accent">.dev</span></span>
+    </div>
+  </div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="#beranda" class="nav__logo">
+        <span class="logo-dot"></span>dzaki<span class="logo-accent">.dev</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#tentang" data-section="tentang">Tentang</a></li>
+        <li><a href="#layanan" data-section="layanan">Layanan</a></li>
+        <li><a href="#portofolio" data-section="portofolio">Portofolio</a></li>
+        <li><a href="#alasan" data-section="alasan">Kenapa Saya</a></li>
+        <li><a href="https://wa.me/62XXXXXXXXXX" class="btn btn--sm">Hubungi</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+          <svg class="dark-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="dark-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu navigasi">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ====== HERO ====== -->
+  <header class="hero" id="beranda">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__wrap">
+      <div class="hero__content">
+        <p class="eyebrow animate" style="--delay: 0">
+          <span class="eyebrow__dot"></span>
+          Freelance Web Developer — UMKM Focused
+        </p>
+        <h1 class="animate" style="--delay: 1">Bikin bisnis Anda <span class="text-shimmer">terlihat profesional</span> lewat website modern.</h1>
+        <p class="lead animate" style="--delay: 2">
+          Saya bantu UMKM punya website cepat, rapi, dan mobile‑friendly —
+          biar pelanggan makin percaya, dan order makin lancar.
+        </p>
+        <div class="hero__cta animate" style="--delay: 3">
+          <a href="https://wa.me/62XXXXXXXXXX" class="btn btn--glow" aria-label="Konsultasi via WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Konsultasi Gratis
+          </a>
+          <a href="#portofolio" class="btn btn--ghost">Lihat Portofolio</a>
+        </div>
+        <div class="hero__trust animate" style="--delay: 4">
+          <div class="trust-item"><span class="trust-check">✓</span> Garansi revisi</div>
+          <div class="trust-item"><span class="trust-check">✓</span> Cepat & terukur</div>
+          <div class="trust-item"><span class="trust-check">✓</span> Harga transparan</div>
+        </div>
+      </div>
+      <aside class="hero__card animate" style="--delay: 2" aria-hidden="true">
+        <div class="hero__card-inner">
+          <div class="card__badge">Populer</div>
+          <div class="card__header">
+            <p>Paket Terlaris</p>
+            <strong>Website UMKM</strong>
+          </div>
+          <ul class="card__list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Desain modern & minimal</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> CTA WhatsApp terintegrasi</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Loading cepat & responsif</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> SEO dasar + analytics</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Revisi hingga puas</li>
+          </ul>
+          <a href="https://wa.me/62XXXXXXXXXX" class="btn btn--card">Mulai Sekarang</a>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main id="konten">
+
+    <!-- ====== ABOUT ====== -->
+    <section class="about" id="tentang">
+      <div class="container about__wrap">
+        <div class="about__photo animate" style="--delay: 0">
+          <div class="about__photo-frame">
+            <img src="dzaki.jpg" alt="Dzaki — Freelance Web Developer" loading="lazy" />
+          </div>
+        </div>
+        <div class="about__text animate" style="--delay: 1">
+          <p class="section-label">Tentang Saya</p>
+          <h2>Web developer yang paham kebutuhan <span class="text-highlight">bisnis kecil.</span></h2>
+          <p class="about__desc">
+            Saya Dzaki — bukan agensi besar, tapi developer yang benar‑benar paham
+            apa yang dibutuhkan UMKM: website yang cepat jadi, mudah dipakai untuk promosi,
+            dan bikin pelanggan percaya. Komunikasi langsung, tanpa ribet.
+          </p>
+        </div>
+        <div class="about__stats animate" style="--delay: 2">
+          <div class="stat-card">
+            <h3><span class="counter" data-target="20">0</span><span>+</span></h3>
+            <p>Proyek Selesai</p>
+          </div>
+          <div class="stat-card">
+            <h3><span class="counter" data-target="7">0</span><span> Hari</span></h3>
+            <p>Rata‑rata Delivery</p>
+          </div>
+          <div class="stat-card">
+            <h3><span class="counter" data-target="100">0</span><span>%</span></h3>
+            <p>Mobile Friendly</p>
+          </div>
+          <div class="stat-card">
+            <h3><span class="counter" data-target="5">0</span><span>★</span></h3>
+            <p>Rating Klien</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="services" id="layanan">
+      <div class="container">
+        <div class="section__head animate">
+          <p class="section-label">Layanan</p>
+          <h2>Solusi website untuk setiap tahap bisnis Anda.</h2>
+          <p>Pilih layanan yang paling sesuai — semua sudah termasuk desain, development, dan revisi.</p>
+        </div>
+        <div class="cards">
+          <article class="card animate" style="--delay: 0">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Landing Page</h3>
+            <p>Satu halaman fokus promosi dengan CTA WhatsApp yang kuat. Cocok untuk iklan.</p>
+            <span class="card__tag">Mulai 500rb</span>
+          </article>
+          <article class="card animate" style="--delay: 1">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Company Profile</h3>
+            <p>Website multi‑halaman yang menampilkan bisnis secara lengkap dan terpercaya.</p>
+            <span class="card__tag">Mulai 1jt</span>
+          </article>
+          <article class="card animate" style="--delay: 2">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/><circle cx="12" cy="15" r="1"/></svg>
+            </div>
+            <h3>Katalog Online</h3>
+            <p>Tampilkan produk atau jasa dalam layout yang rapi dan mudah di‑browse pelanggan.</p>
+            <span class="card__tag">Mulai 800rb</span>
+          </article>
+          <article class="card animate" style="--delay: 3">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Maintenance</h3>
+            <p>Update konten, optimasi kecepatan, dan perbaikan rutin biar website selalu prima.</p>
+            <span class="card__tag">Bulanan</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PORTFOLIO ====== -->
+    <section class="portfolio" id="portofolio">
+      <div class="container">
+        <div class="section__head animate">
+          <p class="section-label">Portofolio</p>
+          <h2>Beberapa contoh proyek yang pernah saya kerjakan.</h2>
+          <p>Demo website UMKM dengan desain bersih dan konversi‑fokus.</p>
+        </div>
+        <div class="portfolio__grid">
+          <article class="pf-card animate" style="--delay: 0">
+            <div class="pf-card__preview">
+              <div class="pf-card__overlay">
+                <span class="pf-card__overlay-btn">Lihat Detail</span>
+              </div>
+              <div class="pf-card__mockup">
+                <div class="mockup__bar"><span></span><span></span><span></span></div>
+                <div class="mockup__body">
+                  <div class="mockup__hero-block"></div>
+                  <div class="mockup__lines"><span></span><span></span><span></span></div>
+                  <div class="mockup__grid"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="pf-card__info">
+              <span class="pf-card__cat">Landing Page</span>
+              <h3>Kopi Nusantara</h3>
+              <p>Promosi menu, lokasi toko, dan order langsung via WhatsApp.</p>
+            </div>
+          </article>
+          <article class="pf-card animate" style="--delay: 1">
+            <div class="pf-card__preview pf-card__preview--alt">
+              <div class="pf-card__overlay">
+                <span class="pf-card__overlay-btn">Lihat Detail</span>
+              </div>
+              <div class="pf-card__mockup">
+                <div class="mockup__bar"><span></span><span></span><span></span></div>
+                <div class="mockup__body">
+                  <div class="mockup__hero-block"></div>
+                  <div class="mockup__lines"><span></span><span></span><span></span></div>
+                  <div class="mockup__grid"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="pf-card__info">
+              <span class="pf-card__cat">Company Profile</span>
+              <h3>Gentleman Cut</h3>
+              <p>Website booking barbershop dengan gallery dan CTA WhatsApp.</p>
+            </div>
+          </article>
+          <article class="pf-card animate" style="--delay: 2">
+            <div class="pf-card__preview pf-card__preview--cool">
+              <div class="pf-card__overlay">
+                <span class="pf-card__overlay-btn">Lihat Detail</span>
+              </div>
+              <div class="pf-card__mockup">
+                <div class="mockup__bar"><span></span><span></span><span></span></div>
+                <div class="mockup__body">
+                  <div class="mockup__hero-block"></div>
+                  <div class="mockup__lines"><span></span><span></span><span></span></div>
+                  <div class="mockup__grid"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="pf-card__info">
+              <span class="pf-card__cat">Katalog Online</span>
+              <h3>CleanDrop Laundry</h3>
+              <p>Informasi layanan, harga paket, dan jadwal pickup pelanggan.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== VALUE / WHY ME ====== -->
+    <section class="value" id="alasan">
+      <div class="container">
+        <div class="section__head animate">
+          <p class="section-label">Kenapa Saya</p>
+          <h2>Bukan sekadar bikin website — tapi bikin bisnis Anda terlihat serius.</h2>
+        </div>
+        <div class="value__grid">
+          <div class="value-card animate" style="--delay: 0">
+            <div class="value-card__num">01</div>
+            <h3>Fokus Konversi</h3>
+            <p>Setiap halaman dirancang agar pengunjung langsung hubungi Anda.</p>
+          </div>
+          <div class="value-card animate" style="--delay: 1">
+            <div class="value-card__num">02</div>
+            <h3>Desain Terpercaya</h3>
+            <p>Tampilan modern & rapi yang bikin pelanggan tidak ragu.</p>
+          </div>
+          <div class="value-card animate" style="--delay: 2">
+            <div class="value-card__num">03</div>
+            <h3>Responsif Total</h3>
+            <p>Sempurna di HP, tablet, maupun desktop tanpa kompromi.</p>
+          </div>
+          <div class="value-card animate" style="--delay: 3">
+            <div class="value-card__num">04</div>
+            <h3>Support Jelas</h3>
+            <p>Revisi terarah, progres terukur, komunikasi tanpa ribet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section class="testimonials" id="testimoni">
+      <div class="container">
+        <div class="section__head animate">
+          <p class="section-label">Testimoni</p>
+          <h2>Apa kata mereka yang sudah bekerja sama.</h2>
+        </div>
+        <div class="testi__grid">
+          <blockquote class="testi-card animate" style="--delay: 0">
+            <div class="testi-card__quote" aria-hidden="true">“</div>
+            <div class="testi-card__stars">★★★★★</div>
+            <p>"Website kami jadi jauh lebih rapi dan profesional. Order dari WhatsApp naik drastis setelah pakai landing page baru."</p>
+            <footer>
+              <div class="testi-card__avatar">R</div>
+              <div>
+                <strong>Rina S.</strong>
+                <span>Owner, Kopi Nusantara</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testi-card animate" style="--delay: 1">
+            <div class="testi-card__quote" aria-hidden="true">“</div>
+            <div class="testi-card__stars">★★★★★</div>
+            <p>"Prosesnya cepat, komunikasinya enak, dan hasilnya sesuai ekspektasi. Recommended banget buat UMKM!"</p>
+            <footer>
+              <div class="testi-card__avatar">A</div>
+              <div>
+                <strong>Andi P.</strong>
+                <span>Owner, Gentleman Cut</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testi-card animate" style="--delay: 2">
+            <div class="testi-card__quote" aria-hidden="true">“</div>
+            <div class="testi-card__stars">★★★★★</div>
+            <p>"Sebelumnya cuma pakai Instagram. Setelah punya website, pelanggan baru makin percaya sama bisnis kami."</p>
+            <footer>
+              <div class="testi-card__avatar">M</div>
+              <div>
+                <strong>Maya D.</strong>
+                <span>Owner, CleanDrop</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="cta" id="kontak">
+      <div class="container">
+        <div class="cta__box animate">
+          <div class="cta__content">
+            <h2>Siap punya website yang bikin bisnis Anda <span class="text-gradient">lebih dipercaya?</span></h2>
+            <p>Konsultasi gratis, tanpa commitment. Saya bantu carikan solusi terbaik untuk bisnis Anda.</p>
+            <a href="https://wa.me/62XXXXXXXXXX" class="btn btn--glow btn--lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Chat WhatsApp Sekarang
+            </a>
+          </div>
+          <form class="cta__form" id="contactForm" action="#" method="POST">
+            <h3>Atau kirim pesan langsung</h3>
+            <div class="form__group">
+              <input type="text" name="name" id="formName" placeholder="Nama Anda" required autocomplete="name" />
+            </div>
+            <div class="form__group">
+              <input type="email" name="email" id="formEmail" placeholder="Email Anda" required autocomplete="email" />
+            </div>
+            <div class="form__group">
+              <textarea name="message" id="formMessage" placeholder="Ceritakan kebutuhan website Anda..." rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--form">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Kirim Pesan
+            </button>
+            <p class="form__note">Atau email langsung ke <a href="mailto:dzakiarkanzaidan01@email.com">dzakiarkanzaidan01@email.com</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll ke atas">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#beranda" class="nav__logo">
+          <span class="logo-dot"></span>dzaki<span class="logo-accent">.dev</span>
+        </a>
+        <p>Membantu UMKM tampil lebih profesional lewat website modern.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navigasi</h4>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <div class="footer__links">
+        <h4>Kontak</h4>
+        <a href="https://wa.me/62XXXXXXXXXX">WhatsApp</a>
+        <a href="mailto:dzaki@email.com">Email</a>
+        <a href="https://instagram.com/dzakiarkanz_" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://tiktok.com/@dzakiarkanz_" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Dzaki — Web Developer UMKM. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
