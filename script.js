@@ -117,25 +117,117 @@
     sections.forEach((section) => sectionObserver.observe(section));
   }
 
-  /* ===== SCROLL TO TOP ===== */
-  const scrollTopBtn = document.getElementById("scrollTop");
+  /* ===== CUSTOM SCROLLBAR ===== */
+  const scrollbar = document.getElementById("customScrollbar");
+  const scrollTrack = document.getElementById("scrollTrack");
+  const scrollThumb = document.getElementById("scrollThumb");
+  const scrollFill = document.getElementById("scrollFill");
+  const scrollArrowUp = document.getElementById("scrollArrowUp");
+  const scrollArrowDown = document.getElementById("scrollArrowDown");
+  const scrollPercent = document.getElementById("scrollPercent");
 
-  if (scrollTopBtn) {
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (window.scrollY > 500) {
-          scrollTopBtn.classList.add("visible");
-        } else {
-          scrollTopBtn.classList.remove("visible");
-        }
-      },
-      { passive: true }
-    );
+  if (scrollbar && scrollTrack && scrollThumb && scrollFill) {
+    let isDragging = false;
+    let dragStartY = 0;
+    let dragStartScroll = 0;
 
-    scrollTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    // Helper: get scroll fraction
+    function getScrollFraction() {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      return docHeight > 0 ? window.scrollY / docHeight : 0;
+    }
+
+    // Helper: update thumb & fill position from scroll
+    function updateScrollbar() {
+      const fraction = getScrollFraction();
+      const trackH = scrollTrack.offsetHeight;
+      const thumbH = scrollThumb.offsetHeight;
+      const maxTop = trackH - thumbH;
+      const thumbTop = fraction * maxTop;
+
+      scrollThumb.style.top = thumbTop + "px";
+      scrollFill.style.height = (fraction * 100) + "%";
+
+      if (scrollPercent) {
+        scrollPercent.textContent = Math.round(fraction * 100) + "%";
+      }
+    }
+
+    // Show/hide scrollbar on scroll
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        scrollbar.classList.add("visible");
+      } else {
+        scrollbar.classList.remove("visible");
+      }
+      if (!isDragging) {
+        updateScrollbar();
+      }
+    }, { passive: true });
+
+    // Initial update
+    updateScrollbar();
+
+    // --- DRAG thumb to scroll ---
+    function onDragStart(e) {
+      e.preventDefault();
+      isDragging = true;
+      scrollbar.classList.add("dragging");
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      dragStartY = clientY;
+      dragStartScroll = window.scrollY;
+      document.body.style.userSelect = "none";
+    }
+
+    function onDragMove(e) {
+      if (!isDragging) return;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      const deltaY = clientY - dragStartY;
+      const trackH = scrollTrack.offsetHeight;
+      const thumbH = scrollThumb.offsetHeight;
+      const maxTop = trackH - thumbH;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollDelta = (deltaY / maxTop) * docHeight;
+
+      window.scrollTo({ top: dragStartScroll + scrollDelta });
+      updateScrollbar();
+    }
+
+    function onDragEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      scrollbar.classList.remove("dragging");
+      document.body.style.userSelect = "";
+    }
+
+    scrollThumb.addEventListener("mousedown", onDragStart);
+    scrollThumb.addEventListener("touchstart", onDragStart, { passive: false });
+    document.addEventListener("mousemove", onDragMove);
+    document.addEventListener("touchmove", onDragMove, { passive: false });
+    document.addEventListener("mouseup", onDragEnd);
+    document.addEventListener("touchend", onDragEnd);
+
+    // --- Click on track to jump ---
+    scrollTrack.addEventListener("click", (e) => {
+      if (e.target === scrollThumb || scrollThumb.contains(e.target)) return;
+      const rect = scrollTrack.getBoundingClientRect();
+      const clickY = e.clientY - rect.top;
+      const fraction = clickY / rect.height;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      window.scrollTo({ top: fraction * docHeight, behavior: "smooth" });
     });
+
+    // --- Arrow buttons ---
+    if (scrollArrowUp) {
+      scrollArrowUp.addEventListener("click", () => {
+        window.scrollBy({ top: -300, behavior: "smooth" });
+      });
+    }
+    if (scrollArrowDown) {
+      scrollArrowDown.addEventListener("click", () => {
+        window.scrollBy({ top: 300, behavior: "smooth" });
+      });
+    }
   }
 
   /* ===== SCROLL PROGRESS BAR ===== */

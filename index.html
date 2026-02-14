@@ -419,10 +419,24 @@
 
   </main>
 
-  <!-- Scroll to top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll ke atas">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
+  <!-- Custom Scrollbar (Right Side) -->
+  <div class="scrollbar" id="customScrollbar">
+    <button class="scrollbar__arrow scrollbar__arrow--up" id="scrollArrowUp" aria-label="Scroll ke atas">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <div class="scrollbar__track" id="scrollTrack">
+      <div class="scrollbar__fill" id="scrollFill"></div>
+      <div class="scrollbar__thumb" id="scrollThumb">
+        <div class="scrollbar__thumb-grip">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <button class="scrollbar__arrow scrollbar__arrow--down" id="scrollArrowDown" aria-label="Scroll ke bawah">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="scrollbar__percent" id="scrollPercent">0%</div>
+  </div>
 
   <!-- ====== FOOTER ====== -->
   <footer class="footer">
